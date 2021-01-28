@@ -3,12 +3,7 @@ import styles from './App.module.scss';
 import { Table } from './Table/Table';
 
 function App() {
-  const headers = [
-    { id: 'first', text: 'first' },
-    { id: 'second', text: 'second' },
-    { id: 'third', text: 'third' },
-    { id: 'fourth', text: 'fourth' }
-  ];
+  const headers = ['first', 'second', 'third', 'fourth'];
   const data = [
     { first: 1, second: 21, third: 31 },
     { first: 2, second: 22, third: 32, fourth: 42 },

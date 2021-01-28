@@ -8,3 +8,11 @@
   color: blueviolet;
 }
 
+body, html {
+  height: 100%;
+  padding: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}

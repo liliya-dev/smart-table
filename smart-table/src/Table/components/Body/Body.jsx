@@ -3,7 +3,9 @@ import React from 'react';
 import style from './Body.module.scss';
 import TextareaAutosize from 'react-textarea-autosize';
 
-export const Body = ({ tableData, tableHeaders, emptyCeil, editCeil }) => {
+export const Body = ({ 
+  tableData, tableHeaders, emptyCeil, editCeil 
+}) => {
   return (
     <tbody>
       {
@@ -12,13 +14,13 @@ export const Body = ({ tableData, tableHeaders, emptyCeil, editCeil }) => {
             <tr key={i}>
               {
                 tableHeaders.map((header, j) => {
-                  const value = item[header.text] ? item[header.text] : emptyCeil;
+                  const value = item[header] ? item[header] : emptyCeil;
                   return (
-                    <td key={j + i + header.id}>
+                    <td key={j + i + header}>
                       <TextareaAutosize 
                         className={style.textarea}
                         value={value} 
-                        onChange={(event) => editCeil(header.text, event.target.value, i)}
+                        onChange={(event) => editCeil(header, event.target.value, i)}
                       />
                     </td>
                   )
