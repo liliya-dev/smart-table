@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
 import style from './Table.module.scss';
 import { Header } from './components/Header/Header';
 import { Body } from './components/Body/Body';
 import { Modal } from './components/Modal/Modal';
 
-export const Table = ({ headers, data, emptyCeil }) => {
-
+export const Table = ({ 
+  headers, 
+  data, 
+  emptyCeil,
+  styleObj,
+  cellSpacing="0",
+  onCeilEdit=(data) => {},
+  onCeilBlur=(data) => {},
+  onHeaderEdit=(data) => {},
+  onHeaderBlur=(data) => {},
+}) => {
   const [tableHeaders, setTableHeaders] = useState([...headers]);
   const [tableData, setTableData] = useState(data);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -28,10 +38,16 @@ export const Table = ({ headers, data, emptyCeil }) => {
     setIsModalVisible(false);
   }
 
+  const handleClose = () => {
+    setTableHeaders([...tableHeaders]);
+    setIsModalVisible(false);
+  }
+
   const editCeil = (head, value, index) => {
     const newTableData = JSON.parse(JSON.stringify(tableData));
     newTableData[index][head] = value;
     setTableData(newTableData);
+    onCeilEdit(newTableData);
   }
 
   const sendData = () => {
@@ -39,9 +55,8 @@ export const Table = ({ headers, data, emptyCeil }) => {
       headers: [...tableHeaders],
       data: tableData
     };
-    console.log(editedData)
     return editedData;
-  }
+  };
 
   const addColumn = () => {
     setTableHeaders([...tableHeaders, `Column ${tableHeaders.length + 1}`]);
@@ -51,9 +66,9 @@ export const Table = ({ headers, data, emptyCeil }) => {
     let newRow = {};
     tableHeaders.forEach(header => {
       newRow[header] = '';
-    })
-    setTableData([...tableData, newRow])
-  }
+    });
+    setTableData([...tableData, newRow]);
+  };
 
   const editHeaderTitle = (index, value) => {
     const newHeaders = [...tableHeaders];
@@ -66,6 +81,11 @@ export const Table = ({ headers, data, emptyCeil }) => {
       delete item[headerToEdit];
     })
     setTableData(newTableData);
+    onHeaderBlur({data: newTableData, headers: newHeaders});
+  };
+
+  const detectStyle = (value) => {
+    return styleObj[value] ? styleObj[value] : {};
   }
 
   return (
@@ -73,43 +93,59 @@ export const Table = ({ headers, data, emptyCeil }) => {
       <button 
         type="button" 
         onClick={addColumn} 
-        className={style.addButton}
+        style={detectStyle('addColumnButton')}
+        className={classNames(style.addButton)}
       >
           +
       </button>
       <div className={style.wrapper}>
-        <table className={style.table} cellSpacing="0">
+        <table 
+          className={style.table} 
+          style={detectStyle('table')} 
+          cellSpacing={cellSpacing}
+        >
           <Header 
             tableHeaders={tableHeaders} 
             checkUniqueColumn={checkUniqueColumn} 
             addColumn={addColumn}
+            detectStyle={detectStyle}
+            onHeaderEdit={onHeaderEdit}
           />
           <Body 
             tableData={tableData}
             editCeil={editCeil}
             tableHeaders={tableHeaders}
             emptyCeil={emptyCeil}
+            detectStyle={detectStyle}
+            onCeilBlur={onCeilBlur}
           />
         </table>
       </div>
-      <div className={style.buttonWrapper}>
-        <button 
-          className={style.addRowButton}
-          onClick={addRow}
-        >
-          Add row
-        </button>
-      </div>
-      {/* <button type='button' onClick={sendData}>Send data to user</button> */}
+      <button 
+        className={style.addRowButton}
+        onClick={addRow}
+        style={detectStyle('addRowButton')}
+      >
+        Add row
+      </button>
       {
         isModalVisible && (
           <Modal 
             index={activeHeaderIndex}
             headerValue={activeHeaderValue} 
             checkUniqueColumn={checkUniqueColumn}
+            closeModal={handleClose}
+            detectStyle={detectStyle}
           />
         )
       }
+      <button 
+        type='button' 
+        onClick={sendData}
+        style={detectStyle('sendButton')}
+      >
+        Send data to user
+      </button>
     </div>
   )
 }

@@ -3,11 +3,6 @@
   color: aqua;
 }
 
-.btn {
-  composes: App;
-  color: blueviolet;
-}
-
 body, html {
   height: 100%;
   padding: 40px;
@@ -15,4 +10,9 @@ body, html {
 
 * {
   box-sizing: border-box;
+}
+
+.addColumnButton {
+  background-color: red;
+  color: white;
 }
