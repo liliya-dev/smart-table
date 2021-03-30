@@ -6,12 +6,13 @@ import { Header } from './components/Header/Header';
 import { Body } from './components/Body/Body';
 import { Modal } from './components/Modal/Modal';
 
+
 export const Table = ({ 
   headers = [], 
   data = [], 
-  emptyCeil = '',
+  emptyCeil = '', // let's rename to emptyCellPlaceholder? what do you think?  
   styleObj = {},
-  cellSpacing = "0",
+  cellSpacing = "0", // ?
   minColumnSize = 300,
   onCeilEdit = (data) => {},
   onCeilBlur = (data) => {},
