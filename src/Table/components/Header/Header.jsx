@@ -22,6 +22,12 @@ export const Header = ({
     const newHeaders = [...headers];
     newHeaders[index] = event.target.value;
     setHeaders([...newHeaders]);
+    // Suggestion
+    //
+    // setHeaders({
+    //   ...headers,
+    //   [index]: event.target.value
+    // })
     onHeaderEdit(newHeaders)
     event.target.focus();
   }
