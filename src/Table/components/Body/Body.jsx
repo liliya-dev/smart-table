@@ -15,7 +15,7 @@ export const Body = ({
             <tr key={i} style={detectStyle('tableBodyRow')}>
               {
                 tableHeaders.map((header, j) => {
-                  const value = item[header] ? item[header] : emptyCeil;
+                  const value = item[header] ? item[header] : emptyCeil; // suggestion: item[header] || emptyCeil
                   return (
                     <td key={j + i + header} style={{...detectStyle('tableBodyCeil'), minWidth: `${minColumnSize}px` }}>
                       <TextareaAutosize 

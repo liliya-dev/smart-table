@@ -11,7 +11,7 @@ function App() {
     { name: 'reebok', second: 24, fourth: 44 },
   ];
 
-  const emptyCeil = '';
+  const emptyCeil = ''; 
 
   const styleObj = {
     addColumnButton: {

@@ -59,7 +59,7 @@ export const Table = ({
   }
 
   const editCeil = (head, value, index) => {
-    const newTableData = JSON.parse(JSON.stringify(tableData));
+    const newTableData = JSON.parse(JSON.stringify(tableData)); // Is it necessary to parse an array of objects with JSON.Parse()?
     newTableData[index][head] = value;
     setTableData(newTableData);
     onCeilEdit(newTableData);
@@ -70,6 +70,7 @@ export const Table = ({
       headers: [...tableHeaders],
       data: tableData
     };
+
     return editedData;
   };
 
@@ -114,7 +115,7 @@ export const Table = ({
   };
 
   const detectStyle = (value) => {
-    return styleObj[value] ? styleObj[value] : {};
+    return styleObj[value] ? styleObj[value] : {}; // suggestion: styleObj[value] || {}
   }
 
   return (
