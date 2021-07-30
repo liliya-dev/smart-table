@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_homepage_aboutcard",
+  "info": {
+    "name": "aboutcard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "buttonTitle": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }, 
+    "phone": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  }
+}

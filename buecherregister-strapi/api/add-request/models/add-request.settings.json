@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "add-request",
+  "info": {
+    "name": "add-request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "processed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "maxLength": 16,
+      "minLength": 16,
+      "required": true,
+      "regex": "^\\d+$"
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "genre": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "condition": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "numberLedger": {
+      "required": false,
+      "type": "integer"
+    },
+    "language": {
+      "type": "string",
+      "required": false
+    },
+    "date": {
+      "type": "string",
+      "regex": "^\\s*(3[01]|[12][0-9]|0?[1-9])\\.(1[012]|0?[1-9])\\.((?:19|20)\\d{2})\\s*$",
+      "required": false
+    },
+    "price": {
+      "type": "biginteger",
+      "min": "0",
+      "required": false
+    },
+    "style": {
+      "type": "string",
+      "required": false
+    },
+    "authors": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "year": {
+      "max": 2020,
+      "type": "integer"
+    },
+    "country": {
+      "type": "string",
+      "required": false
+    },
+    "century": {
+      "type": "string",
+      "required": false
+    },
+    "pages": {
+      "type": "integer",
+      "min": 0
+    },
+    "remark": {
+      "type": "text"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "uploaded_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "required": false,
+      "plugin": "upload"
+    },
+    "cover_image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "required": false,
+      "plugin": "upload"
+    }
+  }
+}

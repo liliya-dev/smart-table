@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/editions/published",
+      "handler": "edition.getPublicEditions",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/item/:id/:code?",
+      "handler": "edition.getItem",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/random/:quantity",
+      "handler": "edition.getRandom",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/editions/volumes",
+      "handler": "edition.getVolumes",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

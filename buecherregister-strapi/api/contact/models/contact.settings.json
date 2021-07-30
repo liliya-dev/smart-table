@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact",
+  "info": {
+    "name": "contact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "regex": "^\\+4\\d{11}$",
+      "required": true,
+      "minLength": 13,
+      "maxLength": 13,
+      "unique": true
+    }
+  }
+}

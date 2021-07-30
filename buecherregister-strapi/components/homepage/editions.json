@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_homepage_editions",
+  "info": {
+    "name": "editions"
+  },
+  "options": {},
+  "attributes": {
+    "edition": {
+      "model": "edition"
+    }
+  }
+}

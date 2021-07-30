@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_homepage_aboutus",
+  "info": {
+    "name": "aboutus",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.aboutitem",
+      "required": true
+    },
+    "card": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.aboutcard",
+      "required": true
+    }
+  }
+}

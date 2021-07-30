@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presenting-hall-request",
+  "info": {
+    "name": "presenting-hall-request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "maxLength": 16,
+      "minLength": 16,
+      "regex": "^\\d+$"
+    },
+    "processed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

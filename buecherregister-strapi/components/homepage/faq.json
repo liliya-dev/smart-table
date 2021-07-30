@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_quote",
+  "info": {
+    "name": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.question",
+      "required": true
+    }
+  }
+}

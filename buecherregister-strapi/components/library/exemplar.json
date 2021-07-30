@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_library_exemplars",
+  "info": {
+    "name": "exemplar",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "edition": {
+      "model": "edition"
+    },
+    "date": {
+      "type": "string",
+      "regex": "^\\s*(3[01]|[12][0-9]|0?[1-9])\\.(1[012]|0?[1-9])\\.((?:19|20)\\d{2})\\s*$",
+      "required": true
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "very_good",
+        "good",
+        "acceptable"
+      ],
+      "required": true,
+      "default": "very_good"
+    },
+    "cost": {
+      "type": "biginteger",
+      "min": "0"
+    },
+    "note": {
+      "type": "text"
+    },
+    "isExemplarHidden": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }, 
+    "isCostVisible": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }, 
+    "isDateVisible": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }, 
+    "completed": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "outdated_seller": {
+      "type": "string"
+    },
+    "seller": {
+      "model": "seller"
+    }
+  }
+}

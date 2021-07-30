@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seller",
+  "info": {
+    "name": "seller"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

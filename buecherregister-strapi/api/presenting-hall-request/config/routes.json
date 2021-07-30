@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/presenting-hall-request",
+      "handler": "presenting-hall-request.create",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_homepage_aboutitems",
+  "info": {
+    "name": "aboutitems"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  }
+}

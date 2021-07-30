@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_quote",
+  "info": {
+    "name": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

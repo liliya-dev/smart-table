@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delete-request",
+  "info": {
+    "name": "delete-request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "processed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "maxLength": 16,
+      "minLength": 16,
+      "required": true,
+      "regex": "^\\d+$"
+    },
+    "exemplar_title": {
+      "type": "string",
+      "required": true
+    },
+    "exemplar_id": {
+      "type": "string",
+      "required": true
+    },
+    "exemplar_date": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

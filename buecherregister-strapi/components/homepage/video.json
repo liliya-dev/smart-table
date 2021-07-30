@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_video",
+  "info": {
+    "name": "video",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "buttonTitle": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  }
+}

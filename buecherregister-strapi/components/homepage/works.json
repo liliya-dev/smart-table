@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_homepage_works",
+  "info": {
+    "name": "works"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "books": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.books",
+      "required": true
+    },
+    "genres": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.genres",
+      "required": true
+    },
+    "rareedition": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.rareedition",
+      "required": true
+    },
+    "editions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.editions",
+      "required": true
+    }
+  }
+}

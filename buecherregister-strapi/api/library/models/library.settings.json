@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "library",
+  "info": {
+    "name": "library"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {  
+    "public": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "rate_plan": {
+      "type": "enumeration",
+      "enum": [
+        "top",
+        "vip",
+        "basic"
+      ],
+      "required": false
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "library.exemplar"
+    },
+    "code": {
+      "type": "string",
+      "maxLength": 16,
+      "minLength": 16,
+      "unique": true,
+      "required": true,
+      "regex": "^\\d+$"
+    },
+    "published_At": {
+      "type": "string",
+      "regex": "^\\s*(3[01]|[12][0-9]|0?[1-9])\\.(1[012]|0?[1-9])\\.((?:19|20)\\d{2})\\s*$",
+      "required": false
+    },
+    "published_till": {
+      "type": "string",
+      "regex": "^\\s*(3[01]|[12][0-9]|0?[1-9])\\.(1[012]|0?[1-9])\\.((?:19|20)\\d{2})\\s*$",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_rareedition",
+  "info": {
+    "name": "rareedition"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  }
+}

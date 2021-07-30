@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_homepage_catalog",
+  "info": {
+    "name": "catalog"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "placeholder": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "buttonTitle": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

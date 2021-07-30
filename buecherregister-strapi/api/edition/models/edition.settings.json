@@ -1,0 +1,224 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edition",
+  "info": {
+    "name": "edition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "authors": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "unknown",
+        "apocalypses__beatus_manuscripts",
+        "astronomy__astrology",
+        "bestiaries",
+        "bibles__gospels",
+        "books_of_hours__prayer_books",
+        "cassettes",
+        "chronicles__history__law",
+        "games__hunting",
+        "geography__maps",
+        "islam__oriental",
+        "judaism__hebrew",
+        "leonardo_da_vinci",
+        "literature__poetry",
+        "liturgical_manuscripts",
+        "manual",
+        "medicine__botany__alchemy",
+        "music",
+        "mythology__prophecies",
+        "other_religious_works",
+        "psalteries",
+        "saints_legends",
+        "treatises__secular_works"
+      ],
+      "default": "unknown",
+      "required": true
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "year": {
+      "max": 2020,
+      "type": "integer"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "unknown",
+        "arabic",
+        "armenian",
+        "czech",
+        "dutch",
+        "english",
+        "french",
+        "german",
+        "greek",
+        "hungarian",
+        "italian",
+        "latin",
+        "persian",
+        "portuguese",
+        "pre-columbian",
+        "russian",
+        "spanish",
+        "turkish"
+      ],
+      "default": "latin",
+      "required": true
+    },
+    "volumes": {
+      "required": true,
+      "type": "integer",
+      "default": 1,
+      "min": 1
+    },
+    "pages": {
+      "type": "integer",
+      "min": 0
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "unknown",
+        "armenia",
+        "austria",
+        "belgium",
+        "czech_republic",
+        "egypt",
+        "germany",
+        "greece",
+        "hungary",
+        "france",
+        "italy",
+        "india",
+        "luxembourg",
+        "mexico",
+        "netherlands",
+        "portugal",
+        "russia",
+        "spain",
+        "switzerland",
+        "turkey",
+        "united_kingdom"
+      ],
+      "default": "unknown",
+      "required": true
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "unknown",
+        "baroque",
+        "byzantine",
+        "carolingian",
+        "early_prints",
+        "gothic",
+        "hebrew",
+        "insular",
+        "islam/oriental",
+        "late_antiquity",
+        "oriental",
+        "ottonian",
+        "pre_columbian",
+        "renaissance",
+        "romansque"
+      ],
+      "default": "unknown",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "digital",
+        "facsimile",
+        "original"
+      ],
+      "default": "facsimile",
+      "required": true
+    },
+    "format_width": {
+      "type": "integer",
+      "min": 0
+    },
+    "format_height": {
+      "type": "integer",
+      "min": 0
+    },
+    "remark": {
+      "type": "text"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "abbreviation": {
+      "type": "string",
+      "required": true
+    },
+    "century": {
+      "type": "enumeration",
+      "enum": [
+        "unknown",
+        "until_the_fifth_century",
+        "fifth_century",
+        "sixth_century",
+        "seventh_century",
+        "eighth_century",
+        "ninth_century",
+        "tenth_century",
+        "eleventh_century",
+        "twelfth_century",
+        "thirteenth_century",
+        "fourteenth_century",
+        "fifteenth_century",
+        "sixteenth_century",
+        "seventeenth_century",
+        "eighteenth_century",
+        "nineteenth_century",
+        "twentieth_century",
+        "twenty_first_century"
+      ],
+      "default": "unknown",
+      "required": true
+    },
+    "photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "video": {
+      "type": "string",
+      "regex": "^$|http(?:s?):\\/\\/(?:www\\.)?youtu(?:be\\.com\\/watch\\?v=|\\.be\\/)([\\w\\-\\_]*)(&(amp;)?‌​[\\w\\?‌​=]*)?"
+    },
+    "isShown": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

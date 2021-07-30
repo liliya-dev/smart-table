@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/homepage",
+      "handler": "homepage.getData",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

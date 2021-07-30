@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_homepage_features",
+  "info": {
+    "name": "features",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.item",
+      "required": true
+    }
+  }
+}

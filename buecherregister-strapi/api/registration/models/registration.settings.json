@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration",
+  "info": {
+    "name": "Registration"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "surname": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": false,
+      "unique": false
+    },
+    "phone": {
+      "type": "string",
+      "regex": "^\\+4\\d{11}$",
+      "required": true,
+      "unique": true,
+      "maxLength": 13,
+      "minLength": 13
+    },
+    "street": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "postCode": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string"
+    },
+    "aboutUs": {
+      "type": "text"
+    },
+    "messageCountWorks": {
+      "type": "text"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

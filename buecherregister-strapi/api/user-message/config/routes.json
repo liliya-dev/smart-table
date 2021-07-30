@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/user-message",
+      "handler": "user-message.create",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_homepage_facilities",
+  "info": {
+    "name": "facilities",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.itemwithmobile",
+      "required": true
+    }
+  }
+}

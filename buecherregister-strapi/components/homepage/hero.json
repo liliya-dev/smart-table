@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_aboutus",
+  "info": {
+    "name": "aboutus",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "box": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.herobox",
+      "required": true
+    }
+  }
+}

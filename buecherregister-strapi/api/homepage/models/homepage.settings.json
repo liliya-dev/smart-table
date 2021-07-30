@@ -1,0 +1,68 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage",
+  "info": {
+    "name": "homepage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.hero"
+    },
+    "aboutus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.aboutus"
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.quote"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.description"
+    },
+    "catalog": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.catalog"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.features"
+    },
+    "facilities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.facilities"
+    },
+    "works": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.works"
+    },
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.video"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.faq"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.contact"
+    }
+  }
+}

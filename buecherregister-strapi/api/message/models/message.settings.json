@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "message",
+  "info": {
+    "name": "message"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "regex": "^\\+4\\d{11}$",
+      "required": true,
+      "maxLength": 13,
+      "minLength": 13
+    },
+    "email": {
+      "type": "email"
+    },
+    "subject": {
+      "type": "string",
+      "regex": "([^\\s])",
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "regex": "([^\\s])",
+      "required": true
+    },
+    "processed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

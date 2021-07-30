@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user-message",
+  "info": {
+    "name": "user-message"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "sender": {
+      "type": "string",
+      "required": true,
+      "maxLength": 16,
+      "minLength": 16,
+      "regex": "^\\d+$"
+    },
+    "recipient": {
+      "type": "string",
+      "required": true,
+      "maxLength": 16,
+      "minLength": 16,
+      "regex": "^\\d+$"
+    },
+    "message": {
+      "type": "text",
+      "regex": "([^\\s])",
+      "required": true
+    },
+    "details": {
+      "type": "text",
+      "regex": "([^\\s])",
+      "required": false
+    },
+    "exemplar_title": {
+      "type": "text",
+      "regex": "([^\\s])",
+      "required": true
+    },
+    "processed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

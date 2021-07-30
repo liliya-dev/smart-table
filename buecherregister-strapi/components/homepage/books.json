@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_books",
+  "info": {
+    "name": "books"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.title",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "buttonTitle": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  }
+}

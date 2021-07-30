@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/edit/:code",
+      "handler": "edit-request.createRequest",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/edit/:code/:id",
+      "handler": "edit-request.deleteRequest",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

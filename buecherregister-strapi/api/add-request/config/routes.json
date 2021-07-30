@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/add/:code",
+      "handler": "add-request.create",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

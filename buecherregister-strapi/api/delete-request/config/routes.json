@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/delete-request/:code",
+      "handler": "delete-request.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/delete-request/:code/:id",
+      "handler": "delete-request.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
